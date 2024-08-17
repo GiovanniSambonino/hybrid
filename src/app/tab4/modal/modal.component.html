@@ -3,10 +3,47 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Modal</ion-title>
+    <ion-title>{{ data() }} </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="ion-padding">
-  <h1>Value</h1>
-   {{  data()  }} 
+  <ion-card-content class="ion-text-center">
+    <div class="announcement">
+      <h2>Concurso de Ensayos</h2>
+      <p>Tengo el placer de anunciar una emocionante oportunidad para todos los 
+        estudiantes de secundaria. A partir de la próxima semana, se llevará a cabo 
+        un concurso de ensayos en el que los ganadores tendrán la oportunidad de 
+        representar a nuestra escuela en un evento literario a nivel nacional. 
+        Este es un excelente momento para demostrar tus habilidades de escritura y creatividad. 
+        Además, se otorgarán premios y reconocimientos especiales a los mejores ensayos. No pierdas 
+        la oportunidad de participar y destacar en esta actividad única. ¡Prepárate y demuestra tu 
+        talento!</p>
+  </div>
+  </ion-card-content>  
+
+  <ion-card-content class="ion-text-center">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <ion-input formControlName="texto" placeholder="Envia una respuesta"></ion-input>
+      <ion-button type="submit">Responder</ion-button>
+    </form>
+  </ion-card-content>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Respuestas</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Muestra los elementos -->
+      <ion-list>
+        <ion-item *ngFor="let datum of datadb">
+          <ion-label> {{ datum?.texto }} </ion-label>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

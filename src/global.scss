@@ -35,3 +35,17 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('/assets/fonts/Poppins-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Poppins-Bold', sans-serif;
+  }
+  
+  

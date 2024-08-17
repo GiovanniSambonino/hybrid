@@ -1,0 +1,43 @@
+/* Define la fuente personalizada */
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+ion-content {
+    --background: #b4b4b4; /* Fondo blanco para ion-content */
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.announcement, .task {
+    border: 1px solid #83838300;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+.announcement h2, .task h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px 0px;
+    margin-top: 0;
+    color: #008cff;
+    font-size: 4em; /* Tamaño del título */
+    font-family: 'Poppins-Bold', sans-serif; /* Fuente personalizada para el título */
+}
+.announcement p, .task p {
+    font-family: 'Georgia', serif; /* Fuente para la descripción */
+    text-align: justify; /* Justificar el texto */
+    font-size: 1.9em;
+    color: #585858;
+}

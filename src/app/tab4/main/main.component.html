@@ -1,14 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Tab4</ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-  <h1>Tab4</h1>
-  @for (item of [1,2,3,4,5,6]; track $index) {
-      <ion-nav-link router-direction="forward" [component]="modal"
-        [componentProps]="{data: item}">
-        <ion-button>Modal  {{  item  }} </ion-button>
-      </ion-nav-link>
-  }
-</ion-content>
+  <h1>Anuncios del dia</h1>
+
+  <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Anuncio'}">
+    <ion-button class="Anunciocustom-button" expand="block">
+      <div class="buttonanuncio-content">
+        <h2>Anuncio</h2>
+        <p>Esta es la descripción común para Anuncio.</p>
+      </div>
+    </ion-button>
+  </ion-nav-link>
+  
+  <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Tarea'}">
+    <ion-button class="Tareacustom-button" expand="block">
+      <div class="buttontarea-content">
+        <h2>Tarea</h2>
+        <p>Esta es la descripción común para Tarea.</p>
+      </div>
+    </ion-button>
+  </ion-nav-link>
+
+  <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Anuncio'}">
+    <ion-button class="Anunciocustom-button" expand="block">
+      <div class="buttonanuncio-content">
+        <h2>Anuncio</h2>
+        <p>Esta es la descripción común para Anuncio.</p>
+      </div>
+    </ion-button>
+  </ion-nav-link>

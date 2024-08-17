@@ -7,3 +7,15 @@
   p#descripcion {
     text-align: justify;
   }
+
+  .footer {
+    text-align: left;
+    border-top: 1px solid #ddd;
+    position: absolute;
+    bottom: 60px; /* Ajusta este valor para mover el pie de página hacia arriba */
+    width: 100%;
+    padding: 5;
+    margin: 0; /* Elimina margen adicional */
+    line-height: 0.1; /* Ajusta este valor según sea necesario */
+  }
+  

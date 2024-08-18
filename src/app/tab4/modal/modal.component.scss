@@ -1,30 +1,64 @@
-/* Define la fuente personalizada */
+/* Define las fuentes personalizadas */
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url('../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Candy Beans';
+    src: url('../../../assets/fonts/Candy\ Beans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-ion-content {
-    --background: #b4b4b4; /* Fondo blanco para ion-content */
-  }
+@font-face {
+    font-family: 'Cheese Matcha';
+    src: url('../../../assets/fonts/Cheese\ Matcha.otf ') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Lonely Cake';
+    src: url('../../../assets/fonts/Lonely\ Cake.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo para el título en el header */
+.titulo {
+    font-family: 'Cheese Matcha', sans-serif; /* Fuente personalizada para el título */
+    font-size: 2em; /* Tamaño del texto en el título */
+    color: #ffffff; /* Color del texto del título */
+    text-align: center; /* Centrar el texto dentro del ion-title */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente el texto */
+    align-items: center; /* Alinear verticalmente el texto */
+    
+}
+
+/* Estilo global para ion-content */
+ion-content {
+    --background: #fdf9c4; 
+}
+
+/* Fuente para todo el cuerpo */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
+
+/* Contenedor centralizado */
 .container {
     width: 80%;
     margin: 0 auto;
 }
-.announcement, .task {
+
+/* Estilo para las secciones de contenido */
+.announcement, .task, .forum {
     border: 1px solid #83838300;
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 5px;
 }
 
-.announcement h2, .task h2 {
+/* Estilo para los títulos h2 en las secciones */
+.announcement h2, .task h2, .forum h2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -32,12 +66,79 @@ body {
     padding: 10px 0px;
     margin-top: 0;
     color: #008cff;
-    font-size: 4em; /* Tamaño del título */
-    font-family: 'Poppins-Bold', sans-serif; /* Fuente personalizada para el título */
+    font-size: 2.5em; /* Tamaño del título */
+    font-family: 'Lonely Cake', sans-serif; /* Fuente personalizada para el título */
+    
 }
-.announcement p, .task p {
-    font-family: 'Georgia', serif; /* Fuente para la descripción */
+
+/* Estilo para la descripción en las secciones */
+.announcement p, .task p, .forum p {
+    font-family: 'Candy Beans', sans-serif; /* Fuente para la descripción */
     text-align: justify; /* Justificar el texto */
-    font-size: 1.9em;
+    font-size: 1.2em;
     color: #585858;
 }
+
+/* Estilo para las listas dentro de las secciones */
+.announcement ul, .task ul, .forum ul {
+    list-style-type: disc; /* Define el estilo del marcador de la lista */
+    padding-left: 20px; /* Añade un poco de espacio a la izquierda */
+    font-family: 'Candy Beans', sans-serif; /* Aplica la fuente personalizada para las listas */
+}
+
+.announcement li, .task li, .forum li {
+    font-family: 'Candy Beans', sans-serif; /* Aplica la fuente personalizada a los ítems de la lista */
+    font-size: 1.2em; /* Ajusta el tamaño del texto en los ítems */
+    color: #585858; /* Ajusta el color del texto en los ítems */
+}
+
+/* Estilo para el header */
+ion-header {
+    font-family: 'Cheese Matcha', sans-serif; /* Fuente para el header */
+}
+
+/* Estilo para el placeholder del ion-input */
+ion-input ::placeholder {
+    color: #83838300; /* Cambia el color del texto del placeholder */
+    
+  }
+  
+  /* Estilo para el botón dentro del formulario */
+  ion-button {
+    --background: #008cff; /* Color de fondo del botón */
+    --color: #ffffff; /* Color del texto del botón */
+    --border-radius: 20px; /* Opcional: para bordes redondeados */
+    
+  }
+  
+  /* Estilo para el texto del botón dentro del formulario */
+  ion-button {
+    font-size: 1rem; /* Tamaño de la fuente del texto del botón */
+    font-weight: bold; /* Peso de la fuente del texto del botón */
+    color: #ffffff; /* Color del texto del botón */
+    font-family: 'Cheese Matcha', sans-serif; /* Fuente para el header */
+  }
+  
+  /* Estilo para el título dentro del ion-card-header */
+  .buttonanswer {
+    color: #008cff; /* Color del texto del título en el card */
+    font-family: 'Candy Beans', sans-serif; /* Fuente personalizada para el título */
+    font-size: 1.5rem; /* Tamaño de la fuente del título */
+    text-align: left; /* Centra el texto del título */
+  }
+  
+  /* Estilo para el contenido del ion-card */
+  ion-card-content {
+    color: #585858; /* Color del texto dentro del card-content */
+  }
+  
+  /* Estilo para los elementos de la lista */
+  ion-list {
+    --background: #ffffff; /* Color de fondo de la lista */
+  }
+  
+  /* Estilo para los ítems de la lista */
+  ion-item {
+    color: #ffffff; /* Color del texto en los ítems de la lista */
+  }
+  

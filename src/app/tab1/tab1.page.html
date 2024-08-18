@@ -1,41 +1,52 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title class="titulo"> &lt; Perfil  &gt; </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card class="ion-padding-bottom ion-margin-bottom">
+<ion-content class="ion-padding">
+  <div class="profile-container">
+    <div class="profile-header">
+      <ion-avatar class="profile-avatar">
+        <img src="../../assets/images/Allan-.jpg" alt="Avatar de Allan Avendaño">
+      </ion-avatar>
+      <div class="profile-header-info">
+        <h2 class="profile-name">Allan Avendaño</h2>
+        <p class="profile-role">Estudiante de Secundaria</p>
+      </div>
+    </div>
 
-    <ion-card-header>
-      <ion-card-title>Memorias</ion-card-title>
-    </ion-card-header>
+    <div class="profile-info personal-info">
+      <h3 class="info-title">
+        <img src="../../assets/images/3076404.png" alt="Icono Información Personal" class="info-icon">
+        Información Personal</h3>
+      <ul class="info-list">
+        <li><strong>Edad:</strong> 16 años</li>
+        <li><strong>Fecha de Nacimiento:</strong> 15 de marzo de 2008</li>
+        <li><strong>Grado:</strong> 11º Grado</li>
+        <li><strong>Sección:</strong> Ciencias Sociales</li>
+        <li><strong>Promedio Actual:</strong> 8.7</li>
+      </ul>
+    </div>
 
-    <ion-card-content class="ion-text-center">
-      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-        <ion-input formControlName="texto" placeholder="Ingresa tu memoria"></ion-input>
-        <ion-button type="submit">Enviar</ion-button>
-      </form>
-    </ion-card-content>
-  </ion-card>
+    <div class="profile-info representative-info">
+      <h3 class="info-title">
+        <img src="../../assets/images/cjmera.png" alt="Icono Información Representante" class="info-icon">
+        Información del Representante</h3>
+      <p><strong>Nombre del Representante:</strong> Carlos Mera</p>
+      <p><strong>Relación:</strong> Padre</p>
+      <p><strong>Teléfono:</strong> +123 456 7890</p>
+      <p><strong>Email:</strong> carlos.mera&#64;example.com</p>
+    </div>
 
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Lista de Memorias</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-
-      <!-- Muestra los elementos -->
-      <ion-list>
-        <ion-item *ngFor="let datum of data">
-          <ion-label> {{ datum?.texto }} </ion-label>
-        </ion-item>
-      </ion-list>
-
-    </ion-card-content>
-  </ion-card>
+    <div class="profile-info activities-info">
+      <h3 class="info-title">Actividades Extracurriculares</h3>
+      <ul class="activities-list">
+        <li>Miembro del Club de Debate</li>
+        <li>Participante en el Equipo de Fútbol</li>
+        <li>Voluntario en la Cruz Roja</li>
+      </ul>
+    </div>
+  </div>
 </ion-content>
+

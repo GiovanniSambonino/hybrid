@@ -1,4 +1,4 @@
-import { Component, OnInit, input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IonContent, IonHeader, IonTitle, IonToolbar, 
   IonNavLink, IonButton, IonButtons, IonBackButton, 
   IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent,
@@ -30,8 +30,10 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 })
 export class ModalComponent implements OnInit {
 
-  data = input(0)
+  @Input() data: string = ''; 
+
   public datadb : Data[] = [];
+  private tipoRespuesta: string = ''; 
 
   checkoutForm = this.formBuilder.group({
     texto: ''
@@ -40,11 +42,12 @@ export class ModalComponent implements OnInit {
   constructor(private dataProvider: ProviderService , private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.tipoRespuesta = this.data;
     this.loadData()
   }
 
   loadData() {
-    this.dataProvider.getResponse().subscribe( response => {
+    this.dataProvider.getResponse(this.tipoRespuesta).subscribe( response => {
       if( response != null) {
         this.datadb = Object.values(response) as Data[]
       }
@@ -53,10 +56,15 @@ export class ModalComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.dataProvider.postResponse(this.checkoutForm.value).subscribe( (response) => {
-            this.checkoutForm.reset();
-            this.loadData()
-    })
+    const response = {
+      texto: this.checkoutForm.value.texto,
+      tipo: this.tipoRespuesta  // Enviar 'Anuncio' o 'Tarea' según corresponda
+    };
+
+    this.dataProvider.postResponse(this.tipoRespuesta, response).subscribe(() => {
+      this.checkoutForm.reset();
+      this.loadData();  // Vuelve a cargar las respuestas
+    });
   }
 
 }

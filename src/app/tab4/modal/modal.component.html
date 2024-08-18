@@ -3,12 +3,14 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ data() }} </ion-title>
+    <ion-title class="titulo">&lt; {{ data }} &gt;</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-card-content class="ion-text-center">
+
+  <!-- Sección para "Anuncio" -->
+  <ion-card-content class="ion-text-center" *ngIf="data === 'Anuncio'">
     <div class="announcement">
       <h2>Concurso de Ensayos</h2>
       <p>Tengo el placer de anunciar una emocionante oportunidad para todos los 
@@ -19,8 +21,49 @@
         Además, se otorgarán premios y reconocimientos especiales a los mejores ensayos. No pierdas 
         la oportunidad de participar y destacar en esta actividad única. ¡Prepárate y demuestra tu 
         talento!</p>
-  </div>
+    </div>
   </ion-card-content>  
+
+  <!-- Sección para "Tarea" -->
+  <ion-card-content class="ion-text-center" *ngIf="data === 'Tarea'">
+    <div class="forum">
+      <h2>Investigación sobre el Cambio Climático</h2>
+      <p>Estimados estudiantes, se les asigna la siguiente tarea para esta semana. 
+        Deberán investigar sobre los impactos del cambio climático en las comunidades 
+        costeras alrededor del mundo. El objetivo es que comprendan cómo el aumento del 
+        nivel del mar, las tormentas más intensas y otros efectos del cambio climático están 
+        afectando la vida de las personas en estas áreas. La investigación debe incluir un 
+        análisis de al menos tres estudios recientes y una propuesta de posibles soluciones 
+        para mitigar estos impactos. Recuerden que la presentación de esta tarea será la 
+        próxima clase, donde discutirán sus hallazgos con el resto del grupo.</p>
+    </div>
+  </ion-card-content>  
+
+  <!-- Sección para "Foro de discusion" -->
+  <ion-card-content class="ion-text-center" *ngIf="data === 'Foro'">
+    <div class="task">
+        <h2>El Impacto de la Tecnología en la Educación</h2>
+        <p>¡Hola a todos!</p>
+        <p>En los últimos años, hemos visto cómo la tecnología ha transformado muchos 
+          aspectos de nuestras vidas, incluida la educación. Desde el uso de plataformas en 
+          línea para tomar clases, hasta la integración de herramientas digitales en el aula, 
+          la tecnología está cambiando la forma en que aprendemos y enseñamos.</p>
+        <p><strong>Pregunta para debatir:</strong></p>
+        <p>¿Crees que el uso de la tecnología en la educación mejora o dificulta el aprendizaje? 
+          ¿Por qué?</p>
+        <p><strong>Aspectos a considerar:</strong></p>
+        <ul>
+            <li><strong>Ventajas:</strong> 
+              Acceso a recursos educativos en cualquier momento, aprendizaje 
+              personalizado, colaboración en línea, etc.</li>
+            <li><strong>Desafíos:</strong> 
+              Distracciones digitales, dependencia 
+              excesiva de la tecnología, brecha digital, etc.</li>
+        </ul>
+        <p>Queremos saber tu opinión. ¿Qué piensas sobre el impacto de la tecnología en tu propia experiencia educativa? ¿Cómo crees que se podría mejorar el uso de la tecnología en la enseñanza y el aprendizaje?</p>
+    </div>
+</ion-card-content>
+
 
   <ion-card-content class="ion-text-center">
     <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
@@ -31,7 +74,7 @@
   
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Respuestas</ion-card-title>
+      <ion-card-title class="buttonanswer">Respuestas</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>

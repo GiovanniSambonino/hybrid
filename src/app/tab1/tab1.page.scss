@@ -1,0 +1,171 @@
+/* Define las fuentes personalizadas */
+@font-face {
+    font-family: 'Candy Beans';
+    src: url('../../assets/fonts/Candy Beans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cheese Matcha';
+    src: url('../../assets/fonts/Cheese Matcha.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lonely Cake';
+    src: url('../../assets/fonts/Lonely Cake.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos para el ion-header */
+ion-header {
+    font-family: 'Cheese Matcha', sans-serif; /* Fuente personalizada para el encabezado */
+    background-color: #ffffff; /* Fondo blanco para el encabezado */
+}
+
+/* Estilo para el título en el header */
+.titulo {
+    font-family: 'Cheese Matcha', sans-serif; /* Fuente personalizada para el título */
+    font-size: 2em; /* Tamaño del texto en el título */
+    color: #ffffff; /* Color del texto del título */
+    text-align: center; /* Centrar el texto dentro del ion-title */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente el texto */
+    align-items: center; /* Alinear verticalmente el texto */
+  }
+  
+
+/* Estilo global para ion-content */
+ion-content {
+    --background: #f2f6ff; 
+}
+
+/* Estilos generales para la información del perfil */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Estilos para el encabezado del perfil */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #825ef1, #a58bfa); /* Degradado hacia un color más claro para el primer div */
+    padding: 16px;
+    border-radius: 20px;
+}
+
+/* Estilos para el avatar del perfil */
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+}
+
+.profile-avatar img {
+    width: 150px; /* Tamaño del avatar */
+    height: 150px;
+    border-radius: 50%; /* Para que sea redonda */
+    object-fit: cover;
+  }
+  
+  /* Estilo para los íconos de información */
+  .info-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .info-icon {
+    width: 50px; /* Tamaño para los íconos al lado de los títulos */
+    height: 50px;
+    border-radius: 50%; /* Para que sea redonda */
+    margin-right: 8px;
+  }
+
+/* Estilos para la información del encabezado del perfil */
+.profile-header-info {
+    flex: 1;
+}
+
+/* Estilos para el nombre del perfil */
+.profile-name {
+    margin: 0;
+    font-family: 'Lonely Cake', sans-serif; /* Fuente personalizada para el nombre */
+}
+
+/* Estilos para el rol del perfil */
+.profile-role {
+    margin: 0;
+    color: #555;
+    font-family: 'Candy Beans', sans-serif; /* Fuente personalizada para la descripción */
+}
+
+/* Estilos para la información personal */
+.profile-info {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Degradado para el segundo div */
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: linear-gradient(135deg, #6994ff, #8cb2ff); /* Degradado hacia un color más claro */
+}
+
+/* Degradado para el tercer div */
+.representative-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: linear-gradient(135deg, #0f68e8, #6a8ff7); /* Degradado hacia un color más claro */
+}
+.representative-info p {
+    margin: 5px 0; /* Reduce el margen superior e inferior entre los párrafos */
+    font-family: 'Candy Beans', sans-serif;
+}
+
+/* Color sólido para el último div */
+.activities-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background-color: #3789ff; /* Color sólido para el último div */
+    padding: 16px;
+    border-radius: 20px;
+}
+
+/* Estilos para los títulos de la información del perfil */
+.info-title {
+    margin-bottom: 8px;
+    font-family: 'Lonely Cake', sans-serif; /* Fuente personalizada para los títulos */
+}
+
+/* Estilos para las listas de información */
+.info-list, .activities-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilos para los elementos de las listas de información */
+.info-list li, .activities-list li {
+    margin-bottom: 8px;
+    font-family: 'Candy Beans', sans-serif; /* Fuente personalizada para los items de las listas */
+}
+
+/* Estilos para los elementos strong dentro de las listas */
+.info-list li strong {
+    font-family: 'Lonely Cake', sans-serif; /* Fuente personalizada para los strong */
+}
+
+/* Estilos para los elementos strong dentro de las listas */
+.info-list li strong, .representative-info p strong {
+    font-family: 'Lonely Cake', sans-serif; /* Fuente personalizada para los strong */
+    color: #3c455b; /* Color para los elementos strong */
+}

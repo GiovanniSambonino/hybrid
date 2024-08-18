@@ -1,10 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title class="titulo"> &lt; Home &gt; </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-  <h1>Anuncios del dia</h1>
+  <h1 class="titulopantalla">Anuncios del dia</h1>
+
+
+  <div class="divider-container-top">
+    <div class="divider-line"></div>
+  </div>
 
   <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Anuncio'}">
     <ion-button class="Anunciocustom-button" expand="block">
@@ -14,7 +19,7 @@
       </div>
     </ion-button>
   </ion-nav-link>
-  
+
   <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Tarea'}">
     <ion-button class="Tareacustom-button" expand="block">
       <div class="buttontarea-content">
@@ -24,11 +29,12 @@
     </ion-button>
   </ion-nav-link>
 
-  <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Anuncio'}">
-    <ion-button class="Anunciocustom-button" expand="block">
-      <div class="buttonanuncio-content">
-        <h2>Anuncio</h2>
-        <p>Esta es la descripción común para Anuncio.</p>
+  <ion-nav-link router-direction="forward" [component]="modal" [componentProps]="{data: 'Foro'}">
+    <ion-button class="Foroocustom-button" expand="block">
+      <div class="buttonforo-content">
+        <h2>Foro</h2>
+        <p>Esta es la descripción común para Foro.</p>
       </div>
     </ion-button>
   </ion-nav-link>
+</ion-content>

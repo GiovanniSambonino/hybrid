@@ -5,15 +5,18 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProviderService {
-  private URL: string = 'https://ionic-angular-dawm-default-rtdb.firebaseio.com/collection.json';
+  private baseURL: string = 'https://ionic-angular-dawm-default-rtdb.firebaseio.com/';
 
   constructor(private http: HttpClient) { }
-  getResponse() {
-    return this.http.get(this.URL);
+
+  getResponse(tipo: string) {
+    const url = `${this.baseURL}${tipo}_respuestas.json`; // Carga datos de la colección específica
+    return this.http.get(url);
   }
 
-  /* 5. Método con la petición HTTP */
-  postResponse(data: any) {
-    return this.http.post(this.URL, data);
+  postResponse(tipo: string, data: any) {
+    const url = `${this.baseURL}${tipo}_respuestas.json`; // Guarda datos en la colección específica
+    return this.http.post(url, data);
   }
 }
+

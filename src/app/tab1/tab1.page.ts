@@ -3,7 +3,7 @@ import {
   IonHeader, IonToolbar, IonTitle, IonContent,
   IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent,
   IonInput, IonButton,
-  IonLabel, IonList, IonItem
+  IonLabel, IonList, IonItem, IonAvatar
 } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { CommonModule } from '@angular/common'
@@ -23,7 +23,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     IonLabel, IonList, IonItem,
     IonInput, IonButton,
-    IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent
+    IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonAvatar
   ],
   providers: [ProviderService],
 })
@@ -37,23 +37,23 @@ export class Tab1Page {
 
   constructor(private dataProvider: ProviderService, private formBuilder: FormBuilder) { }
 
-  ngOnInit() {
-    this.loadData()
-  }
+  // ngOnInit() {
+  //   this.loadData()
+  // }
 
-  loadData() {
-    this.dataProvider.getResponse().subscribe( response => {
-      if( response != null) {
-        this.data = Object.values(response) as Data[]
-      }
+  // loadData() {
+  //   this.dataProvider.getResponse().subscribe( response => {
+  //     if( response != null) {
+  //       this.data = Object.values(response) as Data[]
+  //     }
         
-    })
-  }
+  //   })
+  // }
 
-  onSubmit(): void {
-    this.dataProvider.postResponse(this.checkoutForm.value).subscribe( (response) => {
-            this.checkoutForm.reset();
-            this.loadData()
-    })
-  }
+  // onSubmit(): void {
+  //   this.dataProvider.postResponse(this.checkoutForm.value).subscribe( (response) => {
+  //           this.checkoutForm.reset();
+  //           this.loadData()
+  //   })
+  // }
 }

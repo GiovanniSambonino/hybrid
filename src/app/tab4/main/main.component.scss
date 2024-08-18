@@ -1,132 +1,256 @@
+/* Importa las fuentes personalizadas */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../../assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Cheese Matcha';
+  src: url('../../../assets/fonts/Cheese Matcha.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Candy Beans';
+  src: url('../../../assets/fonts/Candy\ Beans.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Lonely Cake';
+  src: url('../../../assets/fonts/Lonely\ Cake.ttf') format('truetype');
+}
+
 /* Estilo para el contenido de ion-content */
 ion-content {
-    --background: #ffffff; /* Fondo blanco para ion-content */
-  }
-  
-  /* Estilo para el título dentro de ion-content con padding */
-  .ion-padding h1 {
-    color: #008cff; /* Color del texto del título */
-  }
-  
-  
-  
+  --background: #ffffff; /* Fondo blanco para ion-content */
+}
 
-  /* Estilos para el contenido de los botones */
-  .buttontarea-content,
-  .buttonanuncio-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-  /* Estilos específicos para los títulos y descripciones dentro de los botones */
-  .buttonanuncio-content h2 {
-    margin: 0;
-    font-size: 1.9rem;
-    color: #401dda;
-  }
-  
-  .buttonanuncio-content p {
-    margin: 5;
-    font-size: 1rem;
-    color: #5b3eda;
-  }
-  
-  .buttontarea-content h2 {
-    margin: 0;
-    font-size: 1.9rem;
-    color: #e90c8e;
-  }
-  
-  .buttontarea-content p {
-    margin: 5;
-    font-size: 1rem;
-    color: #ff3ca5;
-  }
-  
-  /* Estilo para el botón Anuncio */
-  .Anunciocustom-button {
-    position: relative;
-    overflow: hidden;
-    --background: linear-gradient(45deg, #805bf1, #ffa958); /* Degradado lineal desde el morado al amarillo */
-    --border-color: #c57600;
-    padding: 5px 10px;
-    margin: 10px;
-    width: 95%;
-    border: none;
-    color: transparent; /* Oculta el color de texto para aplicar animación */
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.4s ease; /* Suaviza el cambio de color del texto */
-  }
-  
-  .Anunciocustom-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ffa200, #805bf1); /* Degradado lineal al pasar el ratón */
-    transition: left 0.4s ease;
-    z-index: 0;
-  }
-  
-  .Anunciocustom-button:hover::before {
-    left: 0;
-  }
-  
-  .Anunciocustom-button:hover .buttonanuncio-content h2 {
-    color: #fff; /* Cambia el color del texto al pasar el ratón */
-  }
-  
-  .Anunciocustom-button:hover .buttonanuncio-content p {
-    color: #fff; /* Cambia el color del texto al pasar el ratón */
-  }
-  
-  /* Estilo para el botón Tarea */
-  .Tareacustom-button {
-    position: relative;
-    overflow: hidden;
-    --background: linear-gradient(45deg, #0f68e8, #CDDC39); /* Degradado lineal desde el azul oscuro al azul claro */
-    --border-color: #CDDC39;
-    padding: 5px 10px;
-    margin: 10px;
-    width: 95%;
-    border: none;
-    color: transparent; /* Oculta el color de texto para aplicar animación */
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.4s ease; /* Suaviza el cambio de color del texto */
-  }
-  
-  .Tareacustom-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #daec34, #0f68e8); /* Degradado lineal al pasar el ratón */
-    transition: left 0.4s ease;
-    z-index: 0;
-  }
-  
-  .Tareacustom-button:hover::before {
-    left: 0;
-  }
-  
-  .Tareacustom-button:hover .buttontarea-content h2 {
-    color: #fff; /* Cambia el color del texto al pasar el ratón */
-  }
-  
-  .Tareacustom-button:hover .buttontarea-content p {
-    color: #fff; /* Cambia el color del texto al pasar el ratón */
-  }
-  
+/* Estilo para el título dentro de ion-content con padding */
+.ion-padding h1 {
+  font-family: 'Cheese Matcha', sans-serif;
+  color: #008cff; /* Color del texto del título */
+  font-size: 2em; /* Tamaño del texto en el título */
+  text-align: center; /* Centrar el texto dentro del ion-title */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente el texto */
+  align-items: center; 
+  line-height: 1; /* Ajusta este valor según sea necesario */
+
+}
+
+/* Estilo para el título en el header */
+.titulo {
+  font-family: 'Cheese Matcha', sans-serif; /* Fuente personalizada para el título */
+  font-size: 2em; /* Tamaño del texto en el título */
+  color: #ffffff; /* Color del texto del título */
+  text-align: center; /* Centrar el texto dentro del ion-title */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente el texto */
+  align-items: center; /* Alinear verticalmente el texto */
+}
+
+
+/* Estilos para el contenido de los botones */
+.buttontarea-content,
+.buttonanuncio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Estilos específicos para los títulos y descripciones dentro de los botones */
+.buttonanuncio-content h2 {
+  font-family: 'Candy Beans', sans-serif;
+  margin: 0;
+  font-size: 1.9rem;
+  color: #401dda;
+}
+
+.buttonanuncio-content p {
+  font-family: 'Lonely Cake', sans-serif;
+  margin: 5;
+  font-size: 1rem;
+  color: #5b3eda;
+}
+
+.buttontarea-content h2 {
+  font-family: 'Candy Beans', sans-serif;
+  margin: 0;
+  font-size: 1.9rem;
+  color: #e90c8e;
+}
+
+.buttontarea-content p {
+  font-family: 'Lonely Cake', sans-serif;
+  margin: 5;
+  font-size: 1rem;
+  color: #ff3ca5;
+}
+
+/* Estilo para el botón Anuncio */
+.Anunciocustom-button {
+  position: relative;
+  overflow: hidden;
+  --background: linear-gradient(45deg, #805bf1, #ffa958); /* Degradado lineal desde el morado al amarillo */
+  --border-color: #c57600;
+  padding: 5px 10px;
+  margin: 10px;
+  width: 95%;
+  border: none;
+  color: transparent; /* Oculta el color de texto para aplicar animación */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.4s ease; /* Suaviza el cambio de color del texto */
+}
+
+.Anunciocustom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffa200, #805bf1); /* Degradado lineal al pasar el ratón */
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.Anunciocustom-button:hover::before {
+  left: 0;
+}
+
+.Anunciocustom-button:hover .buttonanuncio-content h2 {
+  color: #fff; /* Cambia el color del texto al pasar el ratón */
+}
+
+.Anunciocustom-button:hover .buttonanuncio-content p {
+  color: #fff; /* Cambia el color del texto al pasar el ratón */
+}
+
+/* Estilo para el botón Tarea */
+.Tareacustom-button {
+  position: relative;
+  overflow: hidden;
+  --background: linear-gradient(45deg, #0f68e8, #CDDC39); /* Degradado lineal desde el azul oscuro al azul claro */
+  --border-color: #CDDC39;
+  padding: 5px 10px;
+  margin: 10px;
+  width: 95%;
+  border: none;
+  color: transparent; /* Oculta el color de texto para aplicar animación */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.4s ease; /* Suaviza el cambio de color del texto */
+}
+
+.Tareacustom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #daec34, #0f68e8); /* Degradado lineal al pasar el ratón */
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.Tareacustom-button:hover::before {
+  left: 0;
+}
+
+.Tareacustom-button:hover .buttontarea-content h2 {
+  color: #fff; /* Cambia el color del texto al pasar el ratón */
+}
+
+.Tareacustom-button:hover .buttontarea-content p {
+  color: #fff; /* Cambia el color del texto al pasar el ratón */
+}
+
+/* Estilo para el botón Foro */
+.Foroocustom-button {
+  position: relative;
+  overflow: hidden;
+  --background: linear-gradient(45deg, #ff6a6a, #4cffff); /* Degradado lineal desde #ed0000 a #4cffff */
+  --border-color: #ff6a6a; /* Color del borde */
+  padding: 5px 10px;
+  margin: 10px;
+  width: 95%;
+  border: none;
+  color: transparent; /* Oculta el color de texto para aplicar animación */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.4s ease; /* Suaviza el cambio de color del texto */
+}
+
+.Foroocustom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #4cffff, #ff6a6a); /* Degradado lineal al pasar el ratón */
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.Foroocustom-button:hover::before {
+  left: 0;
+}
+
+.Foroocustom-button:hover .buttonforo-content h2 {
+  color: #ff6c3e; /* Cambia el color del texto al pasar el ratón */
+}
+
+.Foroocustom-button:hover .buttonforo-content p {
+  color: #ff6c3e; /* Cambia el color del texto al pasar el ratón */
+}
+
+/* Estilos para el contenido dentro del botón */
+.buttonforo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.buttonforo-content h2 {
+  font-family: 'Candy Beans', sans-serif;
+  margin: 0;
+  font-size: 1.9rem;
+  color: #934500; /* Color del texto dentro del botón */
+}
+
+.buttonforo-content p {
+  font-family: 'Lonely Cake', sans-serif;
+  margin: 5;
+  font-size: 1rem;
+  color: #934500; /* Color del texto dentro del botón */
+}
+
+
+/* Contenedor para las líneas antes y después del contenido */
+.divider-container-top,
+.divider-container-bottom {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  margin: 10px 0; /* Espacio arriba y abajo del contenedor de las líneas */
+}
+
+/* Estilo para cada línea */
+.divider-line {
+  width: 80%; /* Ajusta el ancho de las líneas */
+  height: 2px; /* Altura de las líneas */
+  background-color: #d3d3d3; /* Color gris claro para las líneas */
+}

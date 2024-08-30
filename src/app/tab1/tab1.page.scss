@@ -36,7 +36,6 @@ ion-header {
     justify-content: center; /* Centrar horizontalmente el texto */
     align-items: center; /* Alinear verticalmente el texto */
   }
-  
 
 /* Estilo global para ion-content */
 ion-content {
@@ -72,20 +71,20 @@ ion-content {
     height: 150px;
     border-radius: 50%; /* Para que sea redonda */
     object-fit: cover;
-  }
-  
-  /* Estilo para los íconos de información */
-  .info-title {
+}
+
+/* Estilo para los íconos de información */
+.info-title {
     display: flex;
     align-items: center;
-  }
-  
-  .info-icon {
+}
+
+.info-icon {
     width: 50px; /* Tamaño para los íconos al lado de los títulos */
     height: 50px;
     border-radius: 50%; /* Para que sea redonda */
     margin-right: 8px;
-  }
+}
 
 /* Estilos para la información del encabezado del perfil */
 .profile-header-info {
@@ -107,8 +106,11 @@ ion-content {
 
 /* Estilos para la información personal */
 .profile-info {
+    position: relative;
+    overflow: hidden; /* Asegúrate de que el círculo no sobresalga del div */
     padding: 10px;
     border-radius: 20px;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
 /* Degradado para el segundo div */
@@ -126,6 +128,7 @@ ion-content {
     gap: 1px;
     background: linear-gradient(135deg, #0f68e8, #6a8ff7); /* Degradado hacia un color más claro */
 }
+
 .representative-info p {
     margin: 5px 0; /* Reduce el margen superior e inferior entre los párrafos */
     font-family: 'Candy Beans', sans-serif;
@@ -169,3 +172,31 @@ ion-content {
     font-family: 'Lonely Cake', sans-serif; /* Fuente personalizada para los strong */
     color: #3c455b; /* Color para los elementos strong */
 }
+
+/* Efecto hover para la información personal */
+.personal-info:hover {
+    background: linear-gradient(135deg, #7a9bff, #a0c0ff); /* Color más claro al pasar el mouse */
+}
+
+/* Estilos para el contenedor de expansión */
+.expansion-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); /* Color del efecto de expansión */
+    pointer-events: none; /* No interferir con los clics */
+    width: 0;
+    height: 0;
+    transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    z-index: 1;
+}
+
+/* Estilo para el efecto de expansión en el click */
+.profile-info.clicked .expansion-effect {
+    width: 1000px; /* Tamaño máximo del círculo de expansión */
+    height: 1000px; /* Tamaño máximo del círculo de expansión */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el efecto */
+    transition: width 0.4s ease, height 0.4s ease;
+}
+

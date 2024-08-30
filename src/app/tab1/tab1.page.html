@@ -16,10 +16,12 @@
       </div>
     </div>
 
-    <div class="profile-info personal-info">
+    <div class="profile-info personal-info" (click)="expandEffect($event)">
+      <span class="expansion-effect"></span>
       <h3 class="info-title">
         <img src="../../assets/images/3076404.png" alt="Icono Información Personal" class="info-icon">
-        Información Personal</h3>
+        Información Personal
+      </h3>
       <ul class="info-list">
         <li><strong>Edad:</strong> 16 años</li>
         <li><strong>Fecha de Nacimiento:</strong> 15 de marzo de 2008</li>
@@ -29,17 +31,20 @@
       </ul>
     </div>
 
-    <div class="profile-info representative-info">
+    <div class="profile-info representative-info" (click)="expandEffect($event)">
+      <span class="expansion-effect"></span>
       <h3 class="info-title">
         <img src="../../assets/images/cjmera.png" alt="Icono Información Representante" class="info-icon">
-        Información del Representante</h3>
+        Información del Representante
+      </h3>
       <p><strong>Nombre del Representante:</strong> Carlos Mera</p>
       <p><strong>Relación:</strong> Padre</p>
       <p><strong>Teléfono:</strong> +123 456 7890</p>
       <p><strong>Email:</strong> carlos.mera&#64;example.com</p>
     </div>
 
-    <div class="profile-info activities-info">
+    <div class="profile-info activities-info" (click)="expandEffect($event)">
+      <span class="expansion-effect"></span>
       <h3 class="info-title">Actividades Extracurriculares</h3>
       <ul class="activities-list">
         <li>Miembro del Club de Debate</li>

@@ -37,6 +37,28 @@ export class Tab1Page {
 
   constructor(private dataProvider: ProviderService, private formBuilder: FormBuilder) { }
 
+  expandEffect(event: MouseEvent): void {
+    const target = event.currentTarget as HTMLElement;
+    const effect = target.querySelector('.expansion-effect') as HTMLElement;
+
+    if (effect) {
+      const rect = target.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      // Posicionar el efecto en el punto de clic
+      effect.style.left = `${x}px`;
+      effect.style.top = `${y}px`;
+
+      // Añadir la clase clicked para activar la animación
+      target.classList.add('clicked');
+
+      // Remover la clase después de que la animación termine para permitir otro clic
+      setTimeout(() => {
+        target.classList.remove('clicked');
+      }, 400); // Debe coincidir con la duración de la animación en el CSS
+    }
+  }
   // ngOnInit() {
   //   this.loadData()
   // }
@@ -57,3 +79,4 @@ export class Tab1Page {
   //   })
   // }
 }
+

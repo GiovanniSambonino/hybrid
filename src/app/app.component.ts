@@ -6,7 +6,14 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   templateUrl: 'app.component.html',
   standalone: true,
   imports: [IonApp, IonRouterOutlet],
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    document.body.setAttribute('theme', 'dark');
+  }
 }

@@ -47,5 +47,16 @@
   body {
     font-family: 'Poppins-Bold', sans-serif;
   }
+
+  
+  :root {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+  }
+  
+  [theme="dark"] {
+    --ion-background-color: #222428;
+    --ion-text-color: #ffffff;
+  }
   
   
